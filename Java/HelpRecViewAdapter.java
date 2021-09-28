@@ -50,6 +50,8 @@ public class HelpRecViewAdapter extends RecyclerView.Adapter<HelpRecViewAdapter.
             public void onClick(View v) {
                 Toast.makeText(context,"Gesture shown",Toast.LENGTH_LONG).show();
                 // TODO: Change text to the array elements - headline
+                // TODO: Add sound sample when pressing bathroom sound
+                // TODO: Add the saved number display when pressing gesture
             }
         });
 

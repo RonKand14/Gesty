@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.Camera;
 import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -42,14 +44,12 @@ public class DetectionActivity extends AppCompatActivity
     private final String fist= "[0]";
     private final String headL= "[1]";
     private final String headR= "[2]";
-    private MediaPlayer mp;
+    private MediaPlayer mpPtr;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detection);
-        mp = new MediaPlayer();
-        mp.create(DetectionActivity.this, R.raw.alarm1);
         mCamera = getCameraInstance();
         mCameraPreview = new CameraPreview(this, mCamera);
         // cancel sound on taking picture
@@ -58,9 +58,13 @@ public class DetectionActivity extends AppCompatActivity
         preview.addView(mCameraPreview);
         Button detectBtn = (Button) findViewById(R.id.DetectBtn);
         Button stopBtn = (Button) findViewById(R.id.stopDetectionBtn);
+        Uri noti = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.alarm1);
+        mpPtr=mp;
         backToMain();
         // Get Numbers
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        //TODO: enter default number as police or MADA
         numberP1 = preferences.getString("Number1", "");
         numberP2 = preferences.getString("Number2", "");
         // Init vars
@@ -97,6 +101,7 @@ public class DetectionActivity extends AppCompatActivity
             public void onClick(View v) {
                 cancelTimer();
                 mCamera.stopPreview();
+                if (mpPtr.isPlaying()){mpPtr.stop();}
             }
         });
     }
@@ -163,7 +168,7 @@ public class DetectionActivity extends AppCompatActivity
         // TODO: doesnt work - fix
         else if(result_string.equals(fist))
         {
-            mp.start();
+            mpPtr.start();
         }
         // head right - number2
         else if(result_string.equals(headR))
@@ -185,6 +190,7 @@ public class DetectionActivity extends AppCompatActivity
         {
             @Override
             public void onClick(View v) {
+                if (mpPtr.isPlaying()){mpPtr.stop();}
                 cancelTimer();
                 mCamera.stopPreview();
                 mCamera.release();
