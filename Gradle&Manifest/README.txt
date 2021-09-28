@@ -1,1 +1,0 @@
-Gradle & Manifest information
