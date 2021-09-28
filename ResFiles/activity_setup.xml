@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Gesty.SetupActivity">
+
+    <TextView
+        android:id="@+id/text_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="300dp"
+        android:text="Insert Phone number\n   and press submit"
+        android:textColor="@color/black_overlay"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/backSettingBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:text="Back" />
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:id="@+id/gest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Move Head"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/gest1info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gest1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Insert Phone Number"
+            android:textStyle="italic"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/num1dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gest1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:text="Number: "
+            android:textStyle="italic"
+            android:layout_marginStart="5dp"/>
+
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/gest1info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <Button
+            android:id="@+id/num1Btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Submit"
+            android:layout_below="@id/number1"
+            android:onClick="onSubmit1BtnClick"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="200dp">
+
+        <TextView
+            android:id="@+id/gest2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Move Fist"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/gest2info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gest2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Insert Phone Number"
+            android:textStyle="italic"
+            android:layout_marginStart="5dp"
+            android:autofillHints="Insert Number"/>
+
+        <TextView
+            android:id="@+id/num2dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gest2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:text="Number: "
+            android:textStyle="italic"
+            android:layout_marginStart="5dp"/>
+
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/gest2info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher_background"
+            android:autofillHints="Insert Number" />
+
+        <Button
+            android:id="@+id/num2Btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Submit"
+            android:layout_below="@id/number2"
+            android:onClick="onSubmit2BtnClick"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
