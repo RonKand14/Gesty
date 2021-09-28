@@ -1,1 +1,1 @@
-Xml files - layouts
+Xml files
