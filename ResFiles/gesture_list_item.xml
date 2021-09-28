@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
             android:text="#Gesture: "
             android:textStyle="bold"
             android:layout_marginTop="7dp"/>
@@ -32,7 +33,7 @@
             android:layout_marginTop="7dp"
             android:text="Info: "
             android:textStyle="italic"
-            android:layout_marginStart="5dp"/>
+            android:layout_marginStart="20dp"/>
 
         <ImageView
             android:id="@+id/image1"
@@ -40,6 +41,7 @@
             android:layout_height="150dp"
             android:layout_below="@id/gest1info"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_launcher_background" />
 

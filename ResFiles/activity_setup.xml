@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/purple"
     android:layout_height="match_parent"
     tools:context="com.example.Gesty.SetupActivity">
 
@@ -10,8 +11,8 @@
         android:id="@+id/text_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="500dp"
         android:text="Insert Phone number\n   and press submit"
         android:textColor="@color/black_overlay"
         android:textSize="30sp"
@@ -21,23 +22,23 @@
         android:id="@+id/backSettingBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="700dp"
         android:text="Back" />
 
     <RelativeLayout
         android:id="@+id/view1"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="25dp">
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="250dp">
 
         <TextView
             android:id="@+id/gest1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Move Head"
+            android:text="Move Head Left"
             android:textStyle="bold"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="7dp"/>
 
         <TextView
@@ -49,7 +50,7 @@
             android:layout_marginTop="7dp"
             android:text="Insert Phone Number"
             android:textStyle="italic"
-            android:layout_marginStart="5dp"/>
+            android:layout_marginStart="25dp"/>
 
         <TextView
             android:id="@+id/num1dis"
@@ -66,33 +67,31 @@
             android:id="@+id/number1"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_below="@id/gest1info"
+            android:layout_below="@id/num1dis"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_launcher_background" />
 
         <Button
             android:id="@+id/num1Btn"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Submit"
-            android:layout_below="@id/number1"
-            android:onClick="onSubmit1BtnClick"/>
+            android:layout_below="@id/number1" />
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="200dp">
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="25dp">
 
         <TextView
             android:id="@+id/gest2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Move Fist"
+            android:text="Move Head Right"
             android:textStyle="bold"
             android:layout_marginTop="7dp"/>
 
@@ -123,7 +122,7 @@
             android:id="@+id/number2"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_below="@id/gest2info"
+            android:layout_below="@id/num2dis"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_launcher_background"
@@ -131,11 +130,10 @@
 
         <Button
             android:id="@+id/num2Btn"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Submit"
-            android:layout_below="@id/number2"
-            android:onClick="onSubmit2BtnClick"/>
+            android:layout_below="@id/number2" />
 
     </RelativeLayout>
 
